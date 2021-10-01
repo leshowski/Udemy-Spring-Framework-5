@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.leshowski.springboot.spriden.app.models.dao.ISpridenDao;
+import com.leshowski.springboot.spriden.app.models.entity.Sorlfos;
 import com.leshowski.springboot.spriden.app.models.entity.Spriden;
 
 @Service
@@ -23,6 +24,10 @@ public class SpridenServiceImpl implements ISpridenService{
 	@Override
 	public Spriden findOne(String id) {
 		return iSpridenDao.findOne(id);
+	}
+	
+	public List<Sorlfos> listSorlfos(Integer pidm){
+		return iSpridenDao.listSorlfos(pidm);
 	}
 
 }

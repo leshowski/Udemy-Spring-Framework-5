@@ -29,3 +29,20 @@ INSERT INTO CLIENTES (id,nombre,apellido,email,create_at,foto) VALUES (CLIENTES_
 INSERT INTO CLIENTES (id,nombre,apellido,email,create_at,foto) VALUES (CLIENTES_SEQ.NEXTVAL,	'Luis38','Ponce38','lpctest38@gmail.com',	SYSDATE,'');
 INSERT INTO CLIENTES (id,nombre,apellido,email,create_at,foto) VALUES (CLIENTES_SEQ.NEXTVAL,	'Luis39','Ponce39','lpctest39@gmail.com',	SYSDATE,'');
 INSERT INTO CLIENTES (id,nombre,apellido,email,create_at,foto) VALUES (CLIENTES_SEQ.NEXTVAL,	'Luis40','Ponce40','lpctest40@gmail.com',	SYSDATE,'');
+
+INSERT INTO PRODUCTOS (id,nombre,precio,create_at) values (PRODUCTOS_SEQ.NEXTVAL,'Panasonic Pantalla LCD',259990,SYSDATE);
+INSERT INTO PRODUCTOS (id,nombre,precio,create_at) values (PRODUCTOS_SEQ.NEXTVAL,'Sony cámara digital DSC-W320B',123490,SYSDATE);
+INSERT INTO PRODUCTOS (id,nombre,precio,create_at) values (PRODUCTOS_SEQ.NEXTVAL,'Apple Ipod shuffle',1499990,SYSDATE);
+INSERT INTO PRODUCTOS (id,nombre,precio,create_at) values (PRODUCTOS_SEQ.NEXTVAL,'Sony Notebook Z110',37990,SYSDATE);
+INSERT INTO PRODUCTOS (id,nombre,precio,create_at) values (PRODUCTOS_SEQ.NEXTVAL,'HP Multifuncional F2280',69990,SYSDATE);
+INSERT INTO PRODUCTOS (id,nombre,precio,create_at) values (PRODUCTOS_SEQ.NEXTVAL,'Bicicleta Bianchi aro 26',69990,SYSDATE);
+INSERT INTO PRODUCTOS (id,nombre,precio,create_at) values (PRODUCTOS_SEQ.NEXTVAL,'Mica cómida 5 cajones',299990,SYSDATE);
+
+INSERT INTO FACTURAS (id,descripcion,observacion,cliente_id,create_at) VALUES (FACTURAS_SEQ.NEXTVAL,'Factura equipos de oficina',null,1,SYSDATE);
+INSERT INTO FACTURAS_ITEMS (id,cantidad,factura_id,producto_id) values (FACTURAS_ITEM_SEQ.NEXTVAL,1,1,1);
+INSERT INTO FACTURAS_ITEMS (id,cantidad,factura_id,producto_id) values (FACTURAS_ITEM_SEQ.NEXTVAL,2,1,4);
+INSERT INTO FACTURAS_ITEMS (id,cantidad,factura_id,producto_id) values (FACTURAS_ITEM_SEQ.NEXTVAL,1,1,5);
+INSERT INTO FACTURAS_ITEMS (id,cantidad,factura_id,producto_id) values (FACTURAS_ITEM_SEQ.NEXTVAL,1,1,7);
+
+INSERT INTO FACTURAS (id,descripcion,observacion,cliente_id,create_at) VALUES (FACTURAS_SEQ.NEXTVAL,'Factura Bicicleta','Alguna nota importante',2,SYSDATE);
+INSERT INTO FACTURAS_ITEMS (id,cantidad,factura_id,producto_id) values (FACTURAS_ITEM_SEQ.NEXTVAL,3,2,6);

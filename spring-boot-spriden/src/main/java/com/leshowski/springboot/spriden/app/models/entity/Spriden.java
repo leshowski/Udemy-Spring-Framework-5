@@ -1,18 +1,27 @@
 package com.leshowski.springboot.spriden.app.models.entity;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name = "spriden")
 public class Spriden {
 
 	@Id
-	Integer spriden_pidm;
-	String spriden_id;
-	String spriden_first_name;
-	String spriden_last_name;
+	private Integer spriden_pidm;
+	private String spriden_id;
+	private String spriden_first_name;
+	private String spriden_last_name;
+	
+	@JsonManagedReference
+	@OneToMany(mappedBy = "spriden")
+	private List<Sorlcur> sorlcurList;
 	
 	public Integer getSpriden_pidm() {
 		return spriden_pidm;
@@ -38,6 +47,10 @@ public class Spriden {
 	public void setSpriden_last_name(String spriden_last_name) {
 		this.spriden_last_name = spriden_last_name;
 	}
-	
-	
+	public List<Sorlcur> getSorlcurList() {
+		return sorlcurList;
+	}
+	public void setSorlcurList(List<Sorlcur> sorlcurList) {
+		this.sorlcurList = sorlcurList;
+	}
 }
